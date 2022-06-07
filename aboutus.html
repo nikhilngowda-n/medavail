@@ -1,0 +1,479 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>MedAvail</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+ <style>/* GEneral stuff */
+  *,
+  *::before,
+  *::after{
+      box-sizing: border-box;
+  }
+  html{
+      font-family: sans-serif;
+      line-height: 1.15;
+  }
+  body{
+      font-family: 'lato', sans-serif;
+      color: #454545;
+      font-weight: 300;
+      background: #ffffff;
+  }
+  a{
+      color: #333333;
+      font-weight: 400;
+      outline: none;
+      text-decoration: none;
+      transition: 0.5s;
+  }
+  a:hover,
+  a:focus{
+      outline: none;
+      text-decoration: none;
+  }
+  p{
+      padding: 0;
+      margin: 0 0 15px 0;
+      color: #454545;
+      font-weight: 300;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6{
+      padding: 0;
+      margin: 0 0 15px 0;
+      color: #333333;
+      font-weight: 700;
+  }
+  img{
+      width: 100%;
+      height: auto;
+  }
+  .container{
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+  }
+  .section-title{
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 80px;
+      margin-top: 40px;
+      text-align: center;
+  }
+  .section-title h1{
+      display: inline-block;
+      font-size: 35px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #000000;
+      margin: 0 0 5px;
+      position: relative;
+  }
+  .section-title h1::before{
+      content: '';
+      left: 0;
+      position: absolute;
+      height: 3px;
+      right: 32%;
+      background-color: #50c5fc;
+      bottom: -5px;
+  
+  }
+  .container .section-title h1::before{
+      left: 30%;
+  }
+  .row{
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -15px;
+      margin-left: -15px;
+  }
+  .column{
+      position: relative;
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+  .team{
+      margin-bottom:30px ;
+  }
+  .team .team-img{
+      position: relative;
+      font-size: 0;
+      text-align: center;
+  }
+  .team .team-img img{
+      width: 160px;
+      height: auto;
+      border-radius: 100%;
+      border: 20px solid #f3f4fa;
+  }
+  
+  .team .team-content{
+      padding: 80px 20px 20px 20px;
+      margin-top: -80px;
+      text-align: center;
+      background: #f3f4fa;
+      border-radius: 10px;
+  }
+  .team .team-content h2{
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  }
+  .team .team-content h3{
+      font-size: 16px;
+      font-weight: 300;
+  }
+  .team .team-content h4{
+      font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-style: italic;
+  margin-bottom: 0;
+  }
+  .team .team-content p{
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+  }
+  .team .team-social{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding: 35px;
+      top: 0;
+      left:0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, .6);
+      transition: all .3s;
+      font-size: 0;
+      z-index: 1;
+      opacity: 0;
+  }
+  .team:hover .team-social{
+      opacity: 1;
+  }
+  .team .team-social a{
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      margin-right:5px ;
+      padding: 11px 0 10px 0;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 16px;
+      text-align: center;
+      color: #ffffff;
+      border-radius: 10px;
+      transition: all .3s;
+      margin-top: 50px;
+  }
+  .team .team-social a.social-tw{
+      background: #00acee;
+  }
+  .team .team-social a.social-fb{
+      background: #3b5998;
+  }
+  .team .team-social a.social-li{
+      background: #0e76a8;
+  }
+  .team .team-social a.social-in{
+      background: #3f729b;
+  }
+  .team .team-social a.social-yt{
+      background: #c4302b;
+  }
+  .team .team-social a:last-child{
+      margin-right: 0;
+  }
+  .team:hover .team-social a{
+      margin-top: 0;
+  }
+  .team .team-social a:hover{
+      background: #222222;
+  }
+  
+  
+  /* Mobile Responsive */
+  
+  @media (min-width: 576px){
+      .container{
+          max-width: 540px;
+      }
+      .column{
+          max-width: 50%;
+      }
+  }
+  @media (min-width: 768px){
+      .container{
+          max-width: 720px;
+      }
+      .column{
+          max-width: 33.333333%;
+      }
+  }
+  @media (min-width: 992px){
+      .container{
+          max-width: 960px;
+      }
+      .column{
+          max-width: 25%;
+      }
+  }
+  @media (min-width: 1200px){
+      .container{
+          max-width: 1140px;
+      }
+     
+  } </style>
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">contact@example.com</a>
+        <i class="bi bi-phone"></i> 9999999999
+      </div>
+      <div class="d-none d-lg-flex social-links align-items-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+       
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html">MedAvail</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+
+          <li><a class="nav-link scrollto" href="#departments">Account</a></li>
+          <li><a class="nav-link scrollto" href="viewpharmacy.html">See Responses</a></li>
+          <li><a class="nav-link scrollto" href="#"><i class="bi bi-search"></i> </a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+        
+      </nav><!-- .navbar -->
+
+      <a href="uploadpresc.html" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span>Upload Prescription</a>
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hvero" class="d-flex align-items-center">
+    <div class="container">
+      
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+      <br />
+      <center><h3>About us</h3></center>
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Our Team</h2>
+          <p>Know our roles<p>
+        </div>
+
+        <div class="row gy-5">
+
+          <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="200">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="assets\img\vamshi.png" class="img-fluid" alt="" width="4032" 
+                height="3024">
+              </div>
+              <div class="member-info">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+                <h4>Vamshi K V</h4>
+                <span>Client</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="400">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="assets\img\rakshitha.jpeg" class="img-fluid" alt="" width="4032" 
+                height="3024">
+              </div>
+              <div class="member-info">
+                <div class="social">
+                  <a href="https://www.instagram.com/rakshitha_kannoj/"><i class="bi bi-instagram"></i></a>
+                </div>
+                <h4>Rakshitha</h4>
+                <span>Developer</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="600">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="assets\img\nikhilng.jpg" class="img-fluid" alt="" width="4032" height="3024">
+              </div>
+              <div class="member-info">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+                <h4>Nikhil N G </h4>
+                <span>Tester</span>
+              </div>
+            </div>
+    
+    </main><!-- End #main -->
+
+
+        <!-- ======= Footer ======= -->
+        <footer id="footer">
+
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-md-6 footer-contact">
+                            <h3>MedAvail</h3>
+                            <p>
+                                Basavangudi<br>
+                                bangalore - 79<br>
+                                India <br><br>
+                                <strong>Phone:</strong> +1 5589 55488 55<br>
+                                <strong>Email:</strong> MedAvail@example.com<br>
+                            </p>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 footer-links">
+                            <h4>Useful Links</h4>
+                            <ul>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                            </ul>
+                        </div>
+
+
+
+                        <!---<div class="col-lg-4 col-md-6 footer-newsletter">
+                           <h4>Join Our Newsletter</h4>
+                           <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                           <form action="" method="post">
+                             <input type="email" name="email"><input type="submit" value="Subscribe">
+                           </form>
+                         </div>--->
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="container d-md-flex py-4">
+
+                <div class="me-md-auto text-center text-md-start">
+                    <div class="copyright">
+                        &copy; Copyright <strong><span>Medilab</span></strong>. All Rights Reserved
+                    </div>
+                    <div class="credits">
+                        <!-- All the links in the footer should remain intact. -->
+                        <!-- You can delete the links only if you purchased the pro version. -->
+                        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/ -->
+                        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                    </div>
+                </div>
+                <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                    <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                </div>
+            </div>
+        </footer><!-- End Footer -->
+
+        <div id="preloader"></div>
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+        <!-- Vendor JS Files -->
+        <script src="assets/vendor/purecounter/purecounter.js"></script>
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="assets/vendor/php-email-form/validate.js"></script>
+
+        <!-- Template Main JS File -->
+        <script src="assets/js/main.js"></script>
+       
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+

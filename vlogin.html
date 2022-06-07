@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>MedAvail</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" integrity="sha256-3sPp8BkKUE7QyPSl6VfBByBroQbKxKG7tsusY2mhbVY=" crossorigin="anonymous" />
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+    <link href="log.css" rel="stylesheet">
+    
+   
+    
+</head>
+<body>
+    <form name="reg_form" onsubmit="return validate" class=".was-validated">
+ <div class="center">
+<div class="login_form_wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-md-offset-2">
+                        <br /><br />
+						<!-- login_wrapper -->
+						<div class="login_wrapper">
+							<h2>Login as Vendor</h2>
+							<div class="formsix-pos">
+								<div class="form-group i-email">
+									<input type="text" name="name" class="form-control" id="email2" placeholder="Username *" required>
+								</div>
+							</div>
+							<div class="formsix-e">
+								<div class="form-group i-password">
+									<input type="password" name="pass" class="form-control"  id="password2" placeholder="Password *" required>
+								</div>
+							</div>
+							<div class="login_remember_box">
+								<label class="control control--checkbox">Remember me
+									<input type="checkbox">
+									<span class="control__indicator"></span>
+								</label>
+								<a href="#" class="forget_password">
+									Forgot Password
+								</a>
+							</div>
+							<div class="login_btn_wrapper">
+								<!--<a onclick="valid()" class="btn btn-primary login_btn"> Login </a>-->
+                                <a onclick="valid()" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
+                 
+							&nbsp;</div>
+							<div class="login_message">
+								<p>Don&rsquo;t have an account ? <a href="register.html"> Sign up </a> </p>
+							</div>
+						</div>
+						<!-- /.login_wrapper-->
+                            </center>
+					</div>
+				</div>
+			</div>
+		</div>
+     </div>
+</form>
+
+
+    <script>
+        function valid() {
+            var name = document.reg_form.name;
+            var pass = document.reg_form.pass;
+            if (name.value.length <= 0) {
+                alert("Enter username");
+                name.focus();
+                return false;
+            }
+            if (pass.value.length <= 0) {
+                alert("Enter password");
+                pass.focus();
+                return false;
+            }
+
+            alert('Login successfull');
+            window.location.href = "vendor (2).html";
+
+        }
+ </script>
+</body>
+</html>
